@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 5.4 Alian Andahur 
+                    Laravel 5.4 Alian Andahur
                 </div>
 
                 <div class="links">
@@ -89,6 +89,22 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
+                 <select class="selectpicker">
+                          <optgroup label="Juegos">
+                            <option> Selecciona ... </option> 
+                            <option>Rol </option>
+                            <option>Estrategia</option>
+                            <option>RPG</option>
+                          </optgroup>
+                          <optgroup label="Consolas">
+                            <option>Play station</option>
+                            <option>x-box</option>
+                            <option>Pc</option>
+                          </optgroup>
+                  </select>
+
+
             </div>
         </div>
     </body>

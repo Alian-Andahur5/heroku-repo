@@ -13,7 +13,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #red;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -83,11 +83,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://laravel.com/docs">Docu</a>
+                    <a href="https://laracasts.com">Lara</a>
+                    <a href="https://laravel-news.com">New</a>
+                    <a href="https://forge.laravel.com">For</a>
+                    <a href="https://github.com/laravel/laravel">Git</a>
                 </div>
 
                  <select class="selectpicker">

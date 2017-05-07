@@ -7,105 +7,29 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <style type="text/css">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #red;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+      </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel 5.4 Alian Andahur
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docu</a>
-                    <a href="https://laracasts.com">Lara</a>
-                    <a href="https://laravel-news.com">New</a>
-                    <a href="https://forge.laravel.com">For</a>
-                    <a href="https://github.com/laravel/laravel">Git</a>
-                </div>
-
-                 <select class="selectpicker">
-                          <optgroup label="Juegos">
-                            <option> Selecciona ... </option> 
-                            <option>Rol </option>
-                            <option>Estrategia</option>
-                            <option>RPG</option>
-                          </optgroup>
-                          <optgroup label="Consolas">
-                            <option>Play station</option>
-                            <option>x-box</option>
-                            <option>Pc</option>
-                          </optgroup>
-                  </select>
+    <input id="name" type="text" name="name">
+        <button id="btn" class="btn-lg btn-primary">Enviar</button>
 
 
-            </div>
-        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $("#btn").click(function(){
+            var name = $('#name').val();
+
+        });
+    });
+    </script>
+
     </body>
+
 </html>

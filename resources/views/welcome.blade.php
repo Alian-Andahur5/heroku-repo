@@ -8,9 +8,9 @@
         <title>Laravel</title>
 
        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       <style type="text/css">
+    <style type="text/css">
 
-      </style>
+    </style>
     </head>
     <body>
     <input id="name" type="text" name="name">
@@ -18,8 +18,8 @@
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-        crossorigin="anonymous"></script>
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
 
     <script type="text/javascript">
      $(document).ready(function(){

@@ -1,35 +1,28 @@
 <!DOCTYPE html>
-    <html lang="{{ config('app.locale') }}">
+    <html>
         <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <title>Laravel</title>
-
-            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <style type="text/css">
-
-        </style>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+                
         </head>
+
         <body>
-        <input id="name" type="text" name="name">
-            <button id="btn" class="btn-lg btn-primary">Enviar</button>
+
+        <nav>
+            <div class="nav-wrapper">
+            <a href="#" class="brand-logo"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="registro">Registrarse</a></li>
+                <li><a href="login">Iniciar sesion</a></li>
+            </ul>
+            </div>
+        </nav>
+
+            <script src="js.jquery.js"></script>
+            <script type="text/javascript" src="js/materialize.min.js"></script>
 
 
-            <script src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-            crossorigin="anonymous"></script>
+        </body>
 
-                <script type="text/javascript">
-                $(document).ready(function(){   
-                    $("#btn").click(function(){
-                        var name = $('#name').val();
-
-                    });
-                });
-                </script>
-
-                </body>
-        
     </html>

@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('registro', 'TareaController@registro');
+Route::get('login', 'TareaController@login');
+

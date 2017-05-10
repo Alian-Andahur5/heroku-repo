@@ -13,8 +13,6 @@
     </style>
     </head>
     <body>
-    <input id="name" type="text" name="name">
-        <button id="btn" class="btn-lg btn-primary">Enviar</button>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.js"
@@ -22,12 +20,7 @@
   crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-     $(document).ready(function(){
-        $("#btn").click(function(){
-            var name = $('#name').val();
-
-        });
-    });
+     
     </script>
 
     </body>

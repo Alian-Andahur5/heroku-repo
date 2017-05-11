@@ -50,7 +50,7 @@
                      greeting = "#caja-error";
                    }
                  else {
-                      greeting = ".hide";
+                      greeting = "hide";
                    }
 
                 });

@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-    <html>
-        <head>
+@extends('layouts.main')
 
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-                
-        </head>
 
-        <body>
+@section('content')
 
+<<<<<<< HEAD
         <nav>
             <div class="nav-wrapper">
             <a href="/" class="brand-logo">Inicio</a>
@@ -27,8 +22,14 @@
         
             <script src="js.jquery.js"></script>
             <script type="text/javascript" src="js/materialize.min.js"></script>
+=======
+
+>>>>>>> aad2a8806a4b4ba46c27489970d30569fd483551
 
 
-        </body>
+@Stop
+@Section('Scripts')
 
-    </html>
+
+
+@stop

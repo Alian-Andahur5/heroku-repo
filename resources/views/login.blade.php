@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
+@extends('layouts.main')
 
+<<<<<<< HEAD
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 
@@ -18,6 +17,9 @@
             </ul>
             </div>
         </nav>
+=======
+@section('content')
+>>>>>>> aad2a8806a4b4ba46c27489970d30569fd483551
 
         <div class="container">
          <div class="row">
@@ -40,10 +42,9 @@
 
                 <a class="waves-effect waves-light btn z-depth-5">Confirmar</a>
         </div>
+@Stop
+@Section('scripts')
 
-        <script src="js.jquery.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
 
-    </body>
 
-</html>
+@Stop

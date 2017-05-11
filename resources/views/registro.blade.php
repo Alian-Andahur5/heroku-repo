@@ -44,11 +44,15 @@
                  var n = username.length;
                  $('#caja-error').removeClass('hide');
                  $(this).val("");
+                 $('#caja-correcta').removeClass('hide');
+                 $(this).val("");
                  console.log(n);
 
                  if (n > 25) {
-                         greeting = "caja-error";
-                     }
+                     greeting = "caja-error";
+                 } else {
+                     greeting = "caja-correcta";
+                 }
 
 
                 });

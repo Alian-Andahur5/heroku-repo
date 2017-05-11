@@ -49,9 +49,9 @@
                  console.log(n);
 
                  if (n > 25) {
-                     greeting = "caja-error";
+                     greeting = "#caja-error";
                  } else {
-                     greeting = "caja-correcta";
+                     greeting = "#caja-correcta";
                  }
 
 

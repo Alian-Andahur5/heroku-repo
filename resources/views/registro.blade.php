@@ -11,7 +11,7 @@
 
         <nav>
             <div class="nav-wrapper">
-            <a href="#" class="brand-logo"></a>
+            <a href="/" class="brand-logo">Inicio</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="registro">Registrarse</a></li>
                 <li><a href="login">Iniciar sesion</a></li>
@@ -22,6 +22,8 @@
         <div class="container">
          <div class="row">
             <form class="col s12">
+            <div class="row">
+            </div>
                 <div class="row">
                     <div class="input-field col s6">
                     <input id="nombre" type="text">
@@ -47,6 +49,7 @@
                     </div>
                     </div>
                 </div>
+                <a class="waves-effect waves-light btn z-depth-5">confirmar</a>
         </div>
 
         <script src="js.jquery.js"></script>

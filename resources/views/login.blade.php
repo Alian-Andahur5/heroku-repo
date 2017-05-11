@@ -11,7 +11,7 @@
 
         <nav>
             <div class="nav-wrapper">
-            <a href="#" class="brand-logo"></a>
+            <a href="/" class="brand-logo">Inicio</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="registro">Registrarse</a></li>
                 <li><a href="login">Iniciar sesion</a></li>
@@ -22,25 +22,23 @@
         <div class="container">
          <div class="row">
             <form class="col s12">
+            <div class="row">
+            </div>
                 <div class="row">
                     <div class="input-field col s6">
-                    <input id="first_name" type="text">
-                    <label for="first_name">Nombre</label>
+                    <input id="email" type="text">
+                    <label for="email">Email</label>
                     </div>
                     </div>
                 <div class="row">
-                    <div class="input-field col s6">
-                    <input id="last_name" type="text">
-                    <label for="last_name">Email</label>
-                    </div>
-                    </div>
-                <div class="row">
-                <div class="input-field col s6">
-                    <input id="last_name" type="text">
-                    <label for="last_name">Contraseña</label>
+                <div class="input-field col s6 ">
+                    <input id="contraseña" type="text">
+                    <label for="contraseña">Contraseña</label>
                     </div>
                     </div>
                 </div>
+
+                <a class="waves-effect waves-light btn z-depth-5">Confirmar</a>
         </div>
 
         <script src="js.jquery.js"></script>

@@ -55,9 +55,9 @@
 
                 });
 
-                 function validateMail("#email"){
+                 function validateMail(email){
 
-                    	object=document.getElementById("#email");
+                    	object=document.getElementById(email);
                     	valueForm=object.value;
 
 

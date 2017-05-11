@@ -23,13 +23,13 @@
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
-                    <input id="contraseña" type="text">
+                    <input id="contraseña1" type="password">
                     <label for="contraseña">Contraseña</label>
                     </div>
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
-                    <input id="recontraseña" type="text">
+                    <input id="recontraseña2" type="password">
                     <label for="recontraseña">Ingrese nuevamente la contraseña</label>
                     </div>
                     </div>
@@ -48,7 +48,7 @@
 
                  if (n > 25) {
                          greeting = "caja-error";
-                     } 
+                     }
 
 
                 });

@@ -12,7 +12,7 @@
                     <input id="nombre" type="text">
                     <label for="nombre">Nombre</label>
                     <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 25 caracteres</div>
-
+                    <div  id="caja-correcta" class="alert alert-success hide" role="alert"> Nombre de usuario correcto </div>
                     </div>
                 </div>
                 <div class="row">
@@ -47,11 +47,9 @@
                  console.log(n);
 
                  if (n > 25) {
-                     greeting = "#caja-error";
-                   }
-                 else {
-                      greeting = "hide";
-                   }
+                         greeting = "caja-error";
+                     } 
+
 
                 });
 

@@ -2,53 +2,34 @@
 
 @section('content')
 
-
-
-<<<<<<< HEAD
-        <nav>
-            <div class="nav-wrapper">
-            <a href="/" class="brand-logo">Inicio</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="registro">Registrarse</a></li>
-                <li><a href="login">Iniciar sesion</a></li>
-            </ul>
-            </div>
-        </nav>
-
-        <div class="container">
-         <div class="row">
-            <form class="col s12">
-            <div class="row">
-            </div>
-=======
   <div class="container">
          <div class="row">
             <form name="Registrar" class="col s12">
->>>>>>> aad2a8806a4b4ba46c27489970d30569fd483551
+
                 <div class="row">
-                    <div class="input-field col s6">
-                    <input id="nombre" type="text">
-                    <label for="nombre">Nombre</label>
+                    <div class="input-field col s6" >
+                    <input placeholder="ingresar nombre" id="nombre" type="text" class="validate">
+                    <label class="active">Nombre</label>
                     <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 25 caracteres</div>
                     <div  id="caja-correcta" class="alert alert-success hide" role="alert"> Nombre de usuario correcto </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                    <input id="email" type="text">
-                    <label for="email">Email</label>
+                    <input placeholder="ingresar su email" id="email" type="text" class="validate">
+                    <label class="active" for="email">Email</label>
                     </div>
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
-                    <input id="contraseña" type="text">
-                    <label for="contraseña">Contraseña</label>
+                    <input placeholder="ingresar una contreña" id="contraseña" type="text" class="validate">
+                    <label class="active" for="contraseña">Contraseña</label>
                     </div>
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
-                    <input id="recontraseña" type="text">
-                    <label for="recontraseña">Ingrese nuevamente la contraseña</label>
+                    <input placeholder="ingresar nuevamente su contreña" id="recontraseña" type="text">
+                    <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
                     </div>
                     </div>
                 </div>
@@ -57,6 +38,7 @@
 @Stop
 @section('scripts')
         <script>
+        
                 $(document).ready(function(){
                 $("#nombre").blur(function(event) {
                  var username = $("#nombre").val();
@@ -91,6 +73,10 @@
 
 
 
+                });
+
+                $(document).ready(function() {
+                 Materialize.updateTextFields();
                 });
         </script>
 @Stop

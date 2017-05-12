@@ -38,15 +38,16 @@
 @Stop
 @section('scripts')
         <script>
+//validacion nombre dentro de document
                 $(document).ready(function(){
-                $("#nombre").blur(function(event) {  //validacion nombre
+                $("#nombre").blur(function(event) {
                  var username = $("#nombre").val();
                  var n = username.length;
                  $('#caja-error').removeClass('hide');
                  $(this).val("");
                  $('#caja-correcta').removeClass('hide');
                  $(this).val("");
-                 console.log(n);
+              
 
                  if (n > 25) {
                      greeting = "#caja-error";
@@ -56,8 +57,8 @@
 
 
                 });
-
-                 function validateMail(email){    //Validacion email
+//Validacion email
+                 function validateMail(email){
 
                     	object=document.getElementById(email);
                     	valueForm=object.value;

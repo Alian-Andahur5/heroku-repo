@@ -22,14 +22,25 @@
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
+<<<<<<< HEAD
                     <input placeholder="ingresar una contreña" id="contraseña" type="password" class="validate">
+=======
+
+                    <input placeholder="ingresar una contreña" id="contraseña1" type="password" class="validate">
+>>>>>>> 5ec1d76b70c9b3b3fc456347462acc723c8c408d
                     <label class="active" for="contraseña">Contraseña</label>
+
                     </div>
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
+<<<<<<< HEAD
                     <input placeholder="ingresar nuevamente su contreña" id="recontraseña" type="password">
+=======
+                    <input placeholder="ingresar nuevamente su contreña" id="contraseña2" type="password">
+>>>>>>> 5ec1d76b70c9b3b3fc456347462acc723c8c408d
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
+
                     </div>
                     </div>
                 </div>
@@ -38,22 +49,28 @@
 @Stop
 @section('scripts')
         <script>
-        
+
+//validacion nombre dentro de document
+
                 $(document).ready(function(){
                 $("#nombre").blur(function(event) {
                  var username = $("#nombre").val();
                  var n = username.length;
                  $('#caja-error').removeClass('hide');
                  $(this).val("");
-                 console.log(n);
+                 $('#caja-correcta').removeClass('hide');
+                 $(this).val("");
+
 
                  if (n > 25) {
-                         greeting = "caja-error";
-                     } 
+                     greeting = "#caja-error";
+                 } else {
+                     greeting = "#caja-correcta";
+                 }
 
 
                 });
-
+//Validacion email
                  function validateMail(email){
 
                     	object=document.getElementById(email);
@@ -69,8 +86,37 @@
                     	}
 
                     	object.style.color="#f00";
-                    }
+                    };
 
+                    var p1 = document.getElementById("contraseña1").value; //validacion password1 y password2
+                    var p2 = document.getElementById("contraseña2").value;
+                    var espacios = false;
+                    var cont = 0;
+
+                      while (!espacios && (cont < p1.length)) {
+                        if (p1.charAt(cont) == " ")
+                          espacios = true;
+                        cont++;
+                      }
+                      if (espacios) {
+                        alert ("La contraseña no puede contener espacios en blanco");
+                        return false;
+                      }
+
+
+                      if (p1.length == 0 || p2.length == 0) {
+                            alert("Los campos de la contraseña no pueden quedar vacios");
+                            return false;
+                          }
+
+
+                          if (p1 != p2) {
+                               alert("Las passwords deben de coincidir");
+                               return false;
+                             } else {
+                               alert("Todo esta correcto");
+                               return true;
+                             }
 
 
                 });

@@ -16,25 +16,16 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-<<<<<<< HEAD
                     <input placeholder="ingresar su email" id="email" type="text" class="validate">
                     <label class="active" for="email">Email</label>
                     <div  id="mail-error" class="alert alert-danger hide" role="alert">Tu correo tiene caracteres no válidos</div>
                     <div  id="mail-correcto" class="alert alert-success hide" role="alert"> Tu correo es válido </div>
-=======
-                    <input placeholder="ingresar su email" id="email" type="email" class="validate">
-                    <label class="active" for="email" data-error="wrong" data-success="right">Email</label>
->>>>>>> 42a1165013ad851d975fc68eb157e2fbf3ac792b
                     </div>
                 </div>
                 <div class="row">
                 <div class="input-field col s6">
-<<<<<<< HEAD
-                    <input placeholder="ingresar una contreña" id="contraseña" type="password" class="validate">
-=======
 
                     <input placeholder="ingresar una contreña" id="contraseña1" type="password" class="validate">
->>>>>>> 5ec1d76b70c9b3b3fc456347462acc723c8c408d
                     <label class="active" for="contraseña">Contraseña</label>
                     <div  id="contraseña1-error" class="alert alert-danger hide" role="alert">Este campo no puede estar vacio</div>
 
@@ -42,11 +33,8 @@
                 </div>
                 <div class="row">
                 <div class="input-field col s6">
-<<<<<<< HEAD
-                    <input placeholder="ingresar nuevamente su contreña" id="recontraseña" type="password">
-=======
+
                     <input placeholder="ingresar nuevamente su contreña" id="contraseña2" type="password">
->>>>>>> 5ec1d76b70c9b3b3fc456347462acc723c8c408d
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
                     <div  id="contraseña2-error1" class="alert alert-danger hide" role="alert">Este campo no puede estar vacío</div>
                     <div  id="contraseña2-error2" class="alert alert-danger hide" role="alert">Las contraseñas no coinciden</div>

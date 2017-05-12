@@ -8,7 +8,7 @@
 
                 <div class="row">
                     <div class="input-field col s6" >
-                    <input placeholder="ingresar nombre" id="nombre" type="text" class="validate">
+                    <input placeholder="ingresar nombre" id="nombre" type="text" class="validate" data-length="10">
                     <label class="active">Nombre</label>
                     <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 25 caracteres</div>
                     <div  id="caja-correcta" class="alert alert-success hide" role="alert"> Nombre de usuario correcto </div>
@@ -16,19 +16,19 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                    <input placeholder="ingresar su email" id="email" type="text" class="validate">
-                    <label class="active" for="email">Email</label>
+                    <input placeholder="ingresar su email" id="email" type="email" class="validate">
+                    <label class="active" for="email" data-error="wrong" data-success="right">Email</label>
                     </div>
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="ingresar una contreña" id="contraseña" type="text" class="validate">
+                    <input placeholder="ingresar una contreña" id="contraseña" type="password" class="validate">
                     <label class="active" for="contraseña">Contraseña</label>
                     </div>
                     </div>
                 <div class="row">
                 <div class="input-field col s6">
-                    <input placeholder="ingresar nuevamente su contreña" id="recontraseña" type="text">
+                    <input placeholder="ingresar nuevamente su contreña" id="recontraseña" type="password">
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
                     </div>
                     </div>

@@ -18,23 +18,29 @@
                     <div class="input-field col s6">
                     <input placeholder="ingresar su email" id="email" type="text" class="validate">
                     <label class="active" for="email">Email</label>
+                    <div  id="mail-error" class="alert alert-danger hide" role="alert">Tu correo tiene caracteres no válidos</div>
+                    <div  id="mail-correcto" class="alert alert-success hide" role="alert"> Tu correo es válido </div>
                     </div>
-                    </div>
+                </div>
                 <div class="row">
                 <div class="input-field col s6">
 
                     <input placeholder="ingresar una contreña" id="contraseña1" type="password" class="validate">
                     <label class="active" for="contraseña">Contraseña</label>
+                    <div  id="contraseña1-error" class="alert alert-danger hide" role="alert">Este campo no puede estar vacio</div>
 
                     </div>
-                    </div>
+                </div>
                 <div class="row">
                 <div class="input-field col s6">
                     <input placeholder="ingresar nuevamente su contreña" id="contraseña2" type="password">
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
+                    <div  id="contraseña2-error1" class="alert alert-danger hide" role="alert">Este campo no puede estar vacío</div>
+                    <div  id="contraseña2-error2" class="alert alert-danger hide" role="alert">Las contraseñas no coinciden</div>
+                    <div  id="mail-correcto" class="alert alert-success hide" role="alert">Las contraseñas coinciden</div>
 
                     </div>
-                    </div>
+                </div>
                 </div>
                 <a class="waves-effect waves-light btn z-depth-5">confirmar</a>
         </div>
@@ -44,43 +50,50 @@
 
 //validacion nombre dentro de document
 
-                $(document).ready(function(){
+            $(document).ready(function(){
+
                 $("#nombre").blur(function(event) {
-                 var username = $("#nombre").val();
-                 var n = username.length;
-                 $('#caja-error').removeClass('hide');
-                 $(this).val("");
-                 $('#caja-correcta').removeClass('hide');
-                 $(this).val("");
-
-
-                 if (n > 25) {
-                     greeting = "#caja-error";
-                 } else {
-                     greeting = "#caja-correcta";
-                 }
-
-
+                   var username = $("#nombre").val();
+                   var n = username.length;
+                  if (n > 10) {
+                         $('#caja-error').removeClass('hide').delay(2000).fadeOut(400);
+                              $("#username").val("");
+                   } else {
+                         $('#caja-correcta').removeClass('hide').delay(2000).fadeOut(400);
+                   }
                 });
+
+
 //Validacion email
-                 function validateMail(email){
 
-                    	object=document.getElementById(email);
-                    	valueForm=object.value;
+                //capturo un evento(click en el boton, tu despues lo cambias a blur del email)
+                $("#email").blur(function(event) {
+                    //capturo el valor del input email en la variabel email
+                    var email = $("#email").val();
+                    //llamo a mi funcion definida mas abajo, pasando el parametro que espera
+                    validarEmail(email);
+                });
+                //defino la funcion
+                function validarEmail( email ) {
+                    expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                    if ( !expr.test(email) )
+                    {
+                      $('#mail-error').removeClass('hide').delay(2000).fadeOut(400);
+
+                    }
+                    else {
+
+                      $('#mail-correcto').removeClass('hide').delay(2000).fadeOut(400);
+
+                    }
+                }
+
+//validacion password1 y password2
 
 
-                    	var patron=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-                    	if(valueForm.search(patron)==0)
-                    	{
 
-                    		object.style.color="#000";
-                    		return;
-                    	}
 
-                    	object.style.color="#f00";
-                    };
-
-                    var p1 = document.getElementById("contraseña1").value; //validacion password1 y password2
+                    var p1 = document.getElementById("contraseña1").value;
                     var p2 = document.getElementById("contraseña2").value;
                     var espacios = false;
                     var cont = 0;
@@ -91,22 +104,22 @@
                         cont++;
                       }
                       if (espacios) {
-                        alert ("La contraseña no puede contener espacios en blanco");
+                        console.log("La contraseña no puede contener espacios en blanco");
                         return false;
                       }
 
 
                       if (p1.length == 0 || p2.length == 0) {
-                            alert("Los campos de la contraseña no pueden quedar vacios");
+                          console.log("Los campos de la contraseña no pueden quedar vacios");
                             return false;
                           }
 
 
                           if (p1 != p2) {
-                               alert("Las passwords deben de coincidir");
+                               Console.log("Las passwords deben de coincidir");
                                return false;
                              } else {
-                               alert("Todo esta correcto");
+                               Console.log("Todo esta correcto");
                                return true;
                              }
 

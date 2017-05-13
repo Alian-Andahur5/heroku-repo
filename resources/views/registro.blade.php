@@ -8,7 +8,7 @@
 
                 <div class="row">
                     <div class="input-field col s6" >
-                    <input placeholder="ingresar nombre" id="nombre" type="text" class="validate" data-length="10">
+                    <input placeholder="ingresar nombre" name="ingresarnombre"  id="nombre" type="text" class="validate" data-length="10">
                     <label class="active">Nombre</label>
                     <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 25 caracteres</div>
                     <div  id="caja-correcta" class="alert alert-success hide" role="alert"> Nombre de usuario correcto </div>
@@ -16,7 +16,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                    <input placeholder="ingresar su email" id="email" type="text" class="validate">
+                    <input placeholder="ingresar su email" name="ingresaremail" id="email" type="text" class="validate">
                     <label class="active" for="email">Email</label>
                     <div  id="mail-error" class="alert alert-danger hide" role="alert">Tu correo tiene caracteres no válidos</div>
                     <div  id="mail-correcto" class="alert alert-success hide" role="alert"> Tu correo es válido </div>
@@ -25,7 +25,7 @@
                 <div class="row">
                 <div class="input-field col s6">
 
-                    <input placeholder="ingresar una contreña" id="contraseña1" type="password" class="validate">
+                    <input placeholder="ingresar una contreña" name="ingcontraseña1" id="contraseña1" type="password" class="validate">
                     <label class="active" for="contraseña">Contraseña</label>
                     <div  id="contraseña1-error" class="alert alert-danger hide" role="alert">Este campo no puede estar vacio</div>
 
@@ -34,16 +34,17 @@
                 <div class="row">
                 <div class="input-field col s6">
 
-                    <input placeholder="ingresar nuevamente su contreña" id="contraseña2" type="password">
+                    <input placeholder="ingresar nuevamente su contraseña" name="ingcontraseña2" id="contraseña2" type="password">
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
+                    <div  id="contraseña1-error1" class="alert alert-danger hide" role="alert">La contraseña no puede tener espacios en blanco</div>
                     <div  id="contraseña2-error1" class="alert alert-danger hide" role="alert">Este campo no puede estar vacío</div>
                     <div  id="contraseña2-error2" class="alert alert-danger hide" role="alert">Las contraseñas no coinciden</div>
-                    <div  id="mail-correcto" class="alert alert-success hide" role="alert">Las contraseñas coinciden</div>
+                    <div  id="contraseña-ok" class="alert alert-success hide" role="alert">Las contraseñas coinciden</div>
 
                     </div>
                 </div>
                 </div>
-                <a class="waves-effect waves-light btn z-depth-5">confirmar</a>
+                <input type="submit" value="confirmar" class="waves-effect waves-light btn z-depth-5"></a>
         </div>
 @Stop
 @section('scripts')
@@ -91,38 +92,50 @@
 
 //validacion password1 y password2
 
+                  $("#contraseña2").blur(function(event) {
+                     var p2 = $("#contraseña2").val();
+                     var p1 = $("#contraseña1").val();
+                     var espacios = false;
+                     var cont = 0;
+                     while (!espacios && (cont < p1.length)) {
+                       if (p1.charAt(cont) == " ")
+                         espacios = true;
+                       cont++;
+                     }
+                     if (espacios) {
+
+                           $('#contraseña1-error1').removeClass('hide').delay(2000).fadeOut(400);
 
 
+                     }
+                     if (p1.length == 0 || p2.length == 0) {
 
-                    var p1 = document.getElementById("contraseña1").value;
-                    var p2 = document.getElementById("contraseña2").value;
-                    var espacios = false;
-                    var cont = 0;
-
-                      while (!espacios && (cont < p1.length)) {
-                        if (p1.charAt(cont) == " ")
-                          espacios = true;
-                        cont++;
-                      }
-                      if (espacios) {
-                        console.log("La contraseña no puede contener espacios en blanco");
-                        return false;
-                      }
+                            $('#contraseña2-error1').removeClass('hide').delay(2000).fadeOut(400);
 
 
-                      if (p1.length == 0 || p2.length == 0) {
-                          console.log("Los campos de la contraseña no pueden quedar vacios");
-                            return false;
-                          }
+                         }
 
 
-                          if (p1 != p2) {
-                               Console.log("Las passwords deben de coincidir");
-                               return false;
-                             } else {
-                               Console.log("Todo esta correcto");
-                               return true;
+                         if (p1 != p2) {
+
+                             $('#contraseña2-error2').removeClass('hide').delay(2000).fadeOut(400);
+
+
+                            } else {
+
+                                $('#contraseña-ok').removeClass('hide').delay(2000).fadeOut(400);
+
+
+                            }
+                    });
+
+                    function validateForm() {
+                             var x = document.forms["Registrar"]["ingresarnombre"]["ingresaremail"]["ingcontraseña1"]["ingcontraseña2"].value;
+                             if (x == "") {
+                                 alert("Los campos deben estar completos y correctos");
+                                 return false;
                              }
+                          }
 
 
                 });

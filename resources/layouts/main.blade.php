@@ -41,8 +41,9 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous">
       </script>
+      
 
-         
+
         @yield('scripts')
 
     </body>

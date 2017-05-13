@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <a class="waves-effect waves-light btn z-depth-5">Confirmar</a>
+                <div class="col s6 offset-s4"><a class="waves-effect waves-light btn z-depth-5">Confirmar</a></div>
         </div>
         </div>
 @Stop

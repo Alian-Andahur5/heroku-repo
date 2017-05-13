@@ -9,7 +9,7 @@
   border:1px solid #191919;">
   <div class="container">
          <div class="row">
-            <form name="Registrar" class="col s12">
+
 
                 <div class="row">
                     <div class="input-field col s6" >
@@ -53,7 +53,8 @@
                 </div>
                 </div>
 
-                <input type="submit" value="confirmar" class="waves-effect waves-light btn z-depth-5"></a>
+                <div class="col s6 offset-s4"><input  type="submit" id="confirmar" value="confirmar" class="waves-effect waves-light btn z-depth-5 disabled"></a></div>
+
         </div>
         </div>
 @Stop
@@ -65,9 +66,12 @@
                 $("#nombre").blur(function(event) {
                    var username = $("#nombre").val();
                    var n = username.length;
+
                   if (n > 10) {
                          $('#caja-error').removeClass('hide').delay(2000).fadeOut(400);
+
                               $("#username").val("");
+
                    } else {
                          $('#caja-correcta').removeClass('hide').delay(2000).fadeOut(400);
                    }
@@ -119,8 +123,6 @@
                      if (p1.length == 0 || p2.length == 0) {
 
                             $('#contraseña2-error1').removeClass('hide').delay(2000).fadeOut(400);
-
-
                          }
 
 
@@ -137,18 +139,27 @@
                             }
                     });
 
-                    function validateForm() {
-                             var x = document.forms["Registrar"]["ingresarnombre"]["ingresaremail"]["ingcontraseña1"]["ingcontraseña2"].value;
-                             if (x == "") {
-                                 alert("Los campos deben estar completos y correctos");
-                                 return false;
-                             }
-                          }
+                    $("#confirmar").click(function(event){
+
+                      var campos = $("#caja-correcta").val() + ("#mail-correcto").val() + ("#contraseña-ok").val();
+                      var okform = campos;
+
+                      if (okform != " ") {
+
+                        alert("El formulario se ha enviado correctamente");
+
+
+                         } else {
+
+                          alert("El formulario contiene errores");
+
+
+                         }
 
 
                 });
 
-                $(document).ready(function() {
+
                  Materialize.updateTextFields();
                 });
         </script>

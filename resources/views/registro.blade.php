@@ -61,6 +61,8 @@
 @section('scripts')
         <script>
 //validacion nombre dentro de document
+
+       var statusbtn = false;
             $(document).ready(function(){
 
                 $("#nombre").blur(function(event) {
@@ -69,11 +71,11 @@
 
                   if (n > 10) {
                          $('#caja-error').removeClass('hide').delay(2000).fadeOut(400);
-
                               $("#username").val("");
-
+                            statusbtn = false;
                    } else {
                          $('#caja-correcta').removeClass('hide').delay(2000).fadeOut(400);
+                         statusbtn = true;
                    }
                 });
 
@@ -93,11 +95,12 @@
                     if ( !expr.test(email) )
                     {
                       $('#mail-error').removeClass('hide').delay(2000).fadeOut(400);
-
+                      statusbtn = false;
                     }
                     else {
 
                       $('#mail-correcto').removeClass('hide').delay(2000).fadeOut(400);
+                      statusbtn = true;
 
                     }
                 }
@@ -117,47 +120,33 @@
                      if (espacios) {
 
                            $('#contraseña1-error1').removeClass('hide').delay(2000).fadeOut(400);
-
+                           statusbtn = false;
 
                      }
                      if (p1.length == 0 || p2.length == 0) {
 
                             $('#contraseña2-error1').removeClass('hide').delay(2000).fadeOut(400);
+                            statusbtn = false;
                          }
 
 
                          if (p1 != p2) {
 
                              $('#contraseña2-error2').removeClass('hide').delay(2000).fadeOut(400);
-
+                               statusbtn = false;
 
                             } else {
 
                                 $('#contraseña-ok').removeClass('hide').delay(2000).fadeOut(400);
-
+                                  statusbtn = true;
 
                             }
                     });
 
-                    $("#confirmar").click(function(event){
+                    if(btnstatus != false){
 
-                      var campos = $("#caja-correcta").val() + ("#mail-correcto").val() + ("#contraseña-ok").val();
-                      var okform = campos;
-
-                      if (okform != " ") {
-
-                        alert("El formulario se ha enviado correctamente");
-
-
-                         } else {
-
-                          alert("El formulario contiene errores");
-
-
-                         }
-
-
-                });
+                       console.log("bnt activado");
+                    }
 
 
                  Materialize.updateTextFields();

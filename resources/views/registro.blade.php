@@ -2,13 +2,18 @@
 
 @section('content')
 
+
+<div  class="row" style="width:600px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;">
   <div class="container">
          <div class="row">
             <form name="Registrar" class="col s12">
 
                 <div class="row">
                     <div class="input-field col s6" >
-                    <input placeholder="ingresar nombre" id="nombre" type="text" class="validate" data-length="10">
+                    <input placeholder="ingresar nombre" id="nombre" type="text" class="validate" data-length="15">
                     <label class="active">Nombre</label>
                     <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 25 caracteres</div>
                     <div  id="caja-correcta" class="alert alert-success hide" role="alert"> Nombre de usuario correcto </div>
@@ -16,8 +21,8 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                    <input placeholder="ingresar su email" id="email" type="text" class="validate">
-                    <label class="active" for="email">Email</label>
+                    <input placeholder="ingresar su email" id="email" type="email" class="validate">
+                    <label class="active" for="email" data-error="no valido" data-success="correcto">Email</label>
                     <div  id="mail-error" class="alert alert-danger hide" role="alert">Tu correo tiene caracteres no válidos</div>
                     <div  id="mail-correcto" class="alert alert-success hide" role="alert"> Tu correo es válido </div>
                     </div>
@@ -34,7 +39,7 @@
                 <div class="row">
                 <div class="input-field col s6">
 
-                    <input placeholder="ingresar nuevamente su contreña" id="contraseña2" type="password">
+                    <input placeholder="ingresar nuevamente su contreña" id="contraseña2" type="password" class="validate">
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
                     <div  id="contraseña2-error1" class="alert alert-danger hide" role="alert">Este campo no puede estar vacío</div>
                     <div  id="contraseña2-error2" class="alert alert-danger hide" role="alert">Las contraseñas no coinciden</div>
@@ -44,6 +49,7 @@
                 </div>
                 </div>
                 <a class="waves-effect waves-light btn z-depth-5">confirmar</a>
+        </div>
         </div>
 @Stop
 @section('scripts')

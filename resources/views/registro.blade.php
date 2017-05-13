@@ -2,15 +2,21 @@
 
 @section('content')
 
+
+<div  class="row" style="width:600px;
+  margin:30px auto;
+  border-radius:0.4em;
+  border:1px solid #191919;">
   <div class="container">
          <div class="row">
             <form name="Registrar" class="col s12">
 
                 <div class="row">
                     <div class="input-field col s6" >
+
                     <input placeholder="ingresar nombre" name="ingresarnombre"  id="nombre" type="text" class="validate" data-length="10">
-                    <label class="active">Nombre</label>
-                    <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 25 caracteres</div>
+                   <label class="active">Nombre</label>
+                    <div  id="caja-error" class="alert alert-danger hide" role="alert">Nombre de usuario debe ser menor a 10 caracteres</div>
                     <div  id="caja-correcta" class="alert alert-success hide" role="alert"> Nombre de usuario correcto </div>
                     </div>
                 </div>
@@ -18,6 +24,7 @@
                     <div class="input-field col s6">
                     <input placeholder="ingresar su email" name="ingresaremail" id="email" type="text" class="validate">
                     <label class="active" for="email">Email</label>
+
                     <div  id="mail-error" class="alert alert-danger hide" role="alert">Tu correo tiene caracteres no válidos</div>
                     <div  id="mail-correcto" class="alert alert-success hide" role="alert"> Tu correo es válido </div>
                     </div>
@@ -34,6 +41,7 @@
                 <div class="row">
                 <div class="input-field col s6">
 
+
                     <input placeholder="ingresar nuevamente su contraseña" name="ingcontraseña2" id="contraseña2" type="password">
                     <label class="active" for="recontraseña">Ingrese nuevamente la contraseña</label>
                     <div  id="contraseña1-error1" class="alert alert-danger hide" role="alert">La contraseña no puede tener espacios en blanco</div>
@@ -45,6 +53,7 @@
                 </div>
                 </div>
                 <input type="submit" value="confirmar" class="waves-effect waves-light btn z-depth-5"></a>
+        </div>
         </div>
 @Stop
 @section('scripts')

@@ -52,15 +52,14 @@
                     </div>
                 </div>
                 </div>
+
                 <input type="submit" value="confirmar" class="waves-effect waves-light btn z-depth-5"></a>
         </div>
         </div>
 @Stop
 @section('scripts')
         <script>
-
 //validacion nombre dentro de document
-
             $(document).ready(function(){
 
                 $("#nombre").blur(function(event) {

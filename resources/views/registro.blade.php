@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 </div>
-                <input type="submit" value="confirmar" class="waves-effect waves-light btn z-depth-5"></a>
+                <div class="col s6 offset-s4"><input type="submit" value="confirmar" class="waves-effect waves-light btn z-depth-5"></a></div>
         </div>
         </div>
 @Stop
